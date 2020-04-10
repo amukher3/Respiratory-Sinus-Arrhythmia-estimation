@@ -1,3 +1,5 @@
+Any queries/questions/concerns can be sent to: amukher3@rockets.utoledo.edu, abhi0787@gmail.com
+
 # Respiratory-Sinus-Arythmia-estimation(RSA)
 
 The above repo. has the detailed scripts of the methodology adopted and the different evaluation metrics taken into account while estimating the arythmic component from R-R time series.  
