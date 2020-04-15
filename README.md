@@ -17,7 +17,7 @@ This might be one of the reasons that the estimate of RSA using the respiratoty 
 
 # Comparison of the estimated time domain signal with the respirartory belt data:
 
-From the plethora of the available repiratory belt data-sets a few turned out to be usable. The result below depicts the comparison of the estimated time-domain component of the arythmic signal with the respiratory belt data for a particular subject while watching a certain audio-visual clip with a particualr Valence-Arousal rating.  
+From the plethora of the available repiratory belt data-sets a few turned out to be usable. The result below depicts the comparison of the estimated time-domain component of the arythmic signal with the respiratory belt data for a particular subject while watching a certain audio-visual clip with a particualr Valence-Arousal rating.It was ensured that the clip used did not lie on the extreme end of the Arousal scale. Extreme arousal would probably prohibit sinus breathing. 
 
 ![](RSAestimation...jpg)
 
