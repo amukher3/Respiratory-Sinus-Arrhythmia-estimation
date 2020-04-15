@@ -12,12 +12,12 @@ Previous research seemed to have taken a "baseline" approach while estimating th
 
 We decided to take a systemic approach of removing the RSA(Respiratory Sinus Arythmia) from the HR time series. RSA component being heavily affected by our repiration pattern tends to have an increasing effect(increase in tidal volume) during our inspiration and a slow reduction during our expiration. This nature of variation enabled us to form a knowledge-based dictionary which could capture the latent structure in the time series thereby estimating the component. 
 
-![Comparison of the Spectrums](SpectrumOfRSA_OriginalTachogram.jpg)
-
 # NOTE: The respiratory belt data used here was not of the best quality since the subjects were observing audio-visual clips while being connected with the respiratory belt. Various artifacts(Muscle and Motion) along with some noise seems to be there in the respiratory signal. The literature suggests that respiratory belt data to be ONLY used when the subject is under the effect of sinus breathing NOT under the effect of any external stimuli. 
 This might be one of the reasons that the estimate of RSA using the respiratoty belt data as a reference signal in an adaptive filter setting seems to over estimate the spectrum. However, the proposed method seems to estimate the features of the spectrum correctly. 
 
 # CAUTION: Comparing time domain reconstruction of the RSA with the respiratory belt data might seem to be an attractive metric but this idea is fallacious. The respiratory belt data is representative of the arythmic component ONLY when the subject is under the effect of sinus breathing(kind of a relaxed state) having definitive number of annotated breaths in some interval. Comparing the Frequency domain representation of the two signals has been adapted as a standard metric by the community. In addition the respiratory belt data-sets are generally overwhelmed by artifacts and noise which cause additional difficulty in comparison. 
+
+![Comparison of the Spectrums](SpectrumOfRSA_OriginalTachogram.jpg)
 
 The process and the experimental results with previously used metrics has been detailed in the technical report:
 Link to the repo: https://github.com/amukher3/Respiratory-Sinus-Arythmia-estimation 
