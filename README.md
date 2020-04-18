@@ -32,4 +32,4 @@ From the plethora of the available repiratory belt data-sets a few turned out to
 The process and the experimental results with previously used metrics has been detailed in the technical report:
 Link to the repo: https://github.com/amukher3/Respiratory-Sinus-Arythmia-estimation 
 
-#_For MA removal_: https://www.researchgate.net/publication/317290211_Motion_Artifact_Reduction_from_PPG_Signals_During_Intense_Exercise_Using_Filtered_X-LMS
+`#_For MA removal_:` https://www.researchgate.net/publication/317290211_Motion_Artifact_Reduction_from_PPG_Signals_During_Intense_Exercise_Using_Filtered_X-LMS
