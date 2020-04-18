@@ -10,7 +10,7 @@ We initially started off with the goal to estimate the arythmic component from t
 
 Previous research seemed to have taken a **"baseline"** approach while estimating the arythmic component from HR time series. The most general approach found was to directly filter the frequency component and thereby remove it from the time series. Some of the other approaches taken previously have used the respiratory belt signal as a  reference signal to estimate the `RSA component`. We describe a approach which is "standalone" in a sense that it does not rely on any reference signal to estimate the arythmic component. 
 
-We decided to take a systemic approach of removing the `RSA(Respiratory Sinus Arythmia)` from the HR time series. RSA component being heavily affected by our repiration pattern tends to have an increasing effect(increase in _tidal volume_) during our inspiration and a slow reduction during our expiration. This nature of variation enabled us to form a _knowledge-based dictionary_ which could capture the latent structure in the time series thereby estimating the component. 
+We decided to take a systemic approach of removing the `RSA(Respiratory Sinus Arythmia)` from the HR time series. RSA component being heavily affected by our repiration pattern tends to have an increasing effect(increase in _tidal volume_) during our inspiration and a slow reduction during our expiration. This nature of variation enabled us to form a `_knowledge-based dictionary_` which could capture the latent structure in the time series thereby estimating the component. 
 
 @settings {
   font-size: 100;
