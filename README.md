@@ -13,7 +13,7 @@ Previous research seemed to have taken a **"baseline"** approach while estimatin
 We decided to take a systemic approach of removing the `RSA(Respiratory Sinus Arythmia)` from the HR time series. RSA component being heavily affected by our repiration pattern tends to have an increasing effect(increase in _tidal volume_) during our inspiration and a slow reduction during our expiration. This nature of variation enabled us to form a _`knowledge-based dictionary`_ which could capture the latent structure in the time series thereby estimating the component. 
 
 ```
-@settings {
+element {
   font-size: 100;
 }
 # NOTE: The respiratory belt data used here was not of the best quality since the subjects were observing audio-visual clips while being connected with the respiratory belt. Various artifacts(Muscle and Motion) along with some noise seems to be there in the respiratory signal. The literature suggests that respiratory belt data to be ONLY used when the subject is under the effect of sinus breathing NOT under the effect of any external stimuli.
