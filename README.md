@@ -20,7 +20,7 @@ This might be one of the reasons that the estimate of `RSA` using the _respirato
 
 From the plethora of the available repiratory belt data-sets a few turned out to be usable. The result below depicts the comparison of the estimated time-domain component of the arythmic signal with the respiratory belt data for a particular subject while watching a certain audio-visual clip with a particualr Valence-Arousal rating.It was ensured that the clip used did not lie on the extreme end of the Arousal scale. Extreme arousal would probably prohibit sinus breathing. 
 
-*** _`Estimation using Knowledge-based dictionaries`_***
+***_`Estimation using Knowledge-based dictionaries`_***
 ![](RSAestimation...jpg)  
 
 ![](save2_RSAest_knowledgebased.jpg)
@@ -32,4 +32,4 @@ From the plethora of the available repiratory belt data-sets a few turned out to
 The process and the experimental results with previously used metrics has been detailed in the technical report:
 Link to the repo: https://github.com/amukher3/Respiratory-Sinus-Arythmia-estimation 
 
-#For MA removal: https://www.researchgate.net/publication/317290211_Motion_Artifact_Reduction_from_PPG_Signals_During_Intense_Exercise_Using_Filtered_X-LMS
+#_For MA removal_: https://www.researchgate.net/publication/317290211_Motion_Artifact_Reduction_from_PPG_Signals_During_Intense_Exercise_Using_Filtered_X-LMS
