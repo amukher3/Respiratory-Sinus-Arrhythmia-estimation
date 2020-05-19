@@ -1,6 +1,6 @@
 # Any queries/questions/concerns can be sent to: amukher3@rockets.utoledo.edu, abhi0787@gmail.com
 
-# Respiratory-Sinus-Arythmia-estimation(RSA)
+# Respiratory-Sinus-Arrythmia-estimation(RSA)
 
 The above repo. has the detailed scripts and a description of the methodology adopted along with the different evaluation metrics taken into account while estimating the **arythmic component** from a `Inter Beat Interval(IBI)` time series.  
 
