@@ -73,6 +73,9 @@ DecmtFact=InitialBound:.1:FinalBound;
 %Phase shifts at a particualr frequency%
 PhaseShift=0:pi/100:2*pi;
 
+%Amplitude scaling:
+ampShift = 0.1:0.1:1;
+
 %%Pre-allocating the dictionary
 rsaDict = zeros(length(TimeSig), length(PhaseShift)*length(DecmtFact));
 
@@ -80,12 +83,14 @@ rsaDict = zeros(length(TimeSig), length(PhaseShift)*length(DecmtFact));
 
 Count=1;
 
+for amp=1:length(ampShift)
+
 for j=1:length(DecmtFact)
 
     for PhaseIdx=1:length(PhaseShift)
         
     rsaDict(:,Count)=...
-    cos(t/DecmtFact(j)+PhaseShift(PhaseIdx));
+    amp*cos(t/DecmtFact(j)+PhaseShift(PhaseIdx)) + 0.1;
 
     
      Count=Count+1;
@@ -93,7 +98,7 @@ for j=1:length(DecmtFact)
      end
  end
 
-[yfit,r,coeff,iopt,qual]=wmpalg('OMP',TimeSig,rsaDict);
+[yfit,~,~,~,~]=wmpalg('OMP',TimeSig,rsaDict);
 
 % frequency bins
 f=0:0.01:1; 
@@ -125,8 +130,12 @@ pxx=pwelch(TimeSig,[],[],f,SamplingFreqn);
  xlabel('Frequency in Hz');
  ylabel('Power in S^2/Hz');
 
+end
+
 
 end
 
 % plot(f,pxx,'*');
+
+
 
