@@ -19,15 +19,11 @@
 %bound1 ---> lower bound of the R-R intervals
 %bound2 ---> higher bound of the R-R intervals
 
-function [pxx,pyy] = ...
+function [] = ...
     findingSpectrumSimulatedData()
 
 clear all
 close all
-
-%Wait bar
-wBar = waitbar(1,'Percentage Completed...');
-pause(1)
 
 bound1 = 0.6 % as time in seconds
 bound2 = 1.2 % as time in seconds
