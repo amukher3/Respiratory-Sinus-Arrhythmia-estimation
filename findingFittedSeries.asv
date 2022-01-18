@@ -1,0 +1,86 @@
+%################################################
+%Computes the fitted time series using MP or OMP%
+%################################################
+function [] = ...
+    findingFittedSeries()
+
+[bound1,bound2,lengthTimeSig,samplingFreqn,noiseVariance, ...
+    lowerCutFreqn1,lowerCutFreqn2] = settingTheParameters()
+if flag == 1
+[rrIntervals] = simulatingRRIntervals()
+else
+ [rrIntervals] = extracting
+ 
+
+
+
+
+%Bounds for the amount of decimation needed
+%to get it to the upper bound. 
+lowerBound = lowerCutFreqn1*samplingFreqn;
+higherBound = lowerCutFreqn2*samplingFreqn;
+
+%Amount of frequency decimation from the original signal
+%to build the dictionary%
+decmtFact = lowerBound:1:higherBound;
+
+%Phase shifts at a particualr frequency%
+phaseShifts=0:pi/5:2*pi;
+
+%Amplitude scaling:
+ampShifts = 0.1:0.3:1;
+
+%Pre-allocating the dictionary
+rsaDict = zeros(lengthTimeSignal, length(phaseShifts)*length(decmtFact));
+
+%Buliding the dictionary 
+count = 1;
+
+%Fitted time singal index points
+t = 1:1:lengthTimeSignal
+
+for amp=1:length(ampShifts)
+
+for j=1:length(decmtFact)
+
+    for phaseIdx=1:length(phaseShifts)
+        
+    rsaDict(:,count) = ...
+    amp*cos(t/decmtFact(j)+ phaseShifts(phaseIdx)) + ...
+    (amp/2)*cos(t/(100*decmtFact(j))+ phaseShifts(phaseIdx));
+
+     count = count+1;
+    
+     end
+end
+
+ %Band-passing the IBI time series:
+ % Definining the BPF object
+ bpFilt = designfilt('bandpassfir','FilterOrder',200, ...
+ 'CutoffFrequency1',0.01,'CutoffFrequency2',0.5,...
+'SampleRate',samplingFreqn);                                 
+
+%%Performing filtering as a pre-processing step
+%as suggested in the literature...
+dataOut=filter(bpFilt,rrIntervals);
+
+ %Doing Matching Pursuit
+[yfit,~,~,~,~]=wmpalg('OMP',dataOut,rsaDict);
+
+%Calling the function to plot
+%the spectrums
+plottingSpectrums(rrIntervals,yfit,samplingFreqn)
+
+end
+
+%Plotting the original IBI time series
+figure;
+plot(1:length(rrIntervals),rrIntervals)
+legend('Original R-R time series')
+
+%plotting the fitted Time Series
+figure;
+plot(1:length(yfit),yfit)
+legend('Fitted IBI time Series')
+
+end

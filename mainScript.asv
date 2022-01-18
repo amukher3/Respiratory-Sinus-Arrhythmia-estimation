@@ -1,0 +1,18 @@
+%###########################
+% Main Script %
+%##########################
+
+function [] = ...
+    mainScript()
+
+close all
+
+load('C:\Users\abhi0\OneDrive\Desktop\flash_drive_contents\RRSer')
+
+flag = 1
+findingFittedSeries(flag)
+flag = 0
+findingFittedSeries(flag)
+
+end
+

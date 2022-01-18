@@ -1,0 +1,24 @@
+%This script sets the parameter values for using in future
+%Values are set using the available literature in physiology
+
+function [bound1,bound2,lengthTimeSignal,samplingFreqn,noiseVariance, ...
+    lowerCutFreqn1,lowerCutFreqn2, lengt] = settingTheParameters()
+
+
+bound1 = 0.6 % as time in seconds
+bound2 = 1.2 % as time in seconds
+
+%length of the time Signal
+lengthTimeSignal = 2000; 
+
+%sampling freqn taken as the general freqn in literature
+samplingFreqn = 128; 
+
+%Assumed white Gaussian noise variance
+noiseVariance = 0.01
+
+%lower cut-off freqns
+lowerCutFreqn1 = 0.05 % in Hertz
+lowerCutFreqn2 = 0.40 % in Hertz
+
+end
